@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="CSS/greece.css">
+<script type="text/javascript" src="Javascript/all.js"></script>
+</head>
+<body onload="myFunction()">
+
+<div style="text-align:center">
+  <h2>AMERICA</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="IMAGES/Santorini.jpg" height=300 width=300 onclick="myFunction(this);"><br>Santorini
+  </div>
+  
+  <div class="column">
+    <img src="IMAGES/Mykonos.jpg" height=300 width=300 onclick="myFunction(this);"><br>Mykonos
+  </div>
+  <div class="column">
+    <img src=" IMAGESDelphi.jpg" height=300 width=300 onclick="myFunction(this);"><br> Delphi
+  </div>
+  <div class="column">
+    <img src="IMAGES/Corfu.jpg"  height=300 width=300  onclick="myFunction(this);"><br>Corfu
+  </div>
+  <div class="column">
+    <img src="IMAGES/Rhodes Town.jpg" height=300 width=300 onclick="myFunction(this);"><br>Rhodes Town
+  </div>
+  <div class="column">
+    <img src="IMAGES/Nafplio.jpg" height=300 width=300 onclick="myFunction(this);"><br>Nafplio
+  </div>
+  <div class="column">
+    <img src="IMAGES/Thessaloniki.jpg" height=300 width=300 onclick="myFunction(this);"><br>Thessaloniki
+  </div>
+  <div class="column">
+    <img src="IMAGES/Parthenon.jpg" height=300 width=300  onclick="myFunction(this);"><br>Parthenon
+  </div>
+  
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

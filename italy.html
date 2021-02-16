@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="CSS/italy.css">
+
+<script type="text/javascript" src="Javascript/all.js"></script>
+</head>
+<body onload="myFunction()">
+
+<div style="text-align:center">
+  <h2>ITALY</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="IMAGES/Rome.jpg" height=300 width=300 onclick="myFunction(this);"><br>Rome
+  </div>
+  <div class="column">
+    <img src="IMAGES/Florence.jpg" height=300 width=300 onclick="myFunction(this);"><br>Florence
+  </div>
+  <div class="column">
+    <img src=" IMAGES/Milan.jpg"  height=300 width=300  onclick="myFunction(this);"><br> Milan
+  </div>
+  <div class="column">
+    <img src="IMAGES/Pisa and Lucca.jpg" height=300 width=300 onclick="myFunction(this);"><br>Pisa and Lucca
+  </div>
+  <div class="column">
+    <img src="IMAGES/Verona.jpg" height=300 width=300 onclick="myFunction(this);"><br>Verona
+  </div>
+  <div class="column">
+    <img src="IMAGES/The Cinque Terre.jpg" height=300 width=300 onclick="myFunction(this);"><br>The Cinque Terre
+  </div>
+  <div class="column">
+    <img src="IMAGES/Sardinia.jpg" height=300 width=300  onclick="myFunction(this);"><br>Sardinia
+  </div>
+  <div class="column">
+    <img src="IMAGES/Ravenna.jpg" height=300 width=300 onclick="myFunction(this);"><br>Ravenna
+  </div>
+  
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="CSS/india.css">
+<script type="text/javascript" src="Javascript/all.js"></script>
+</head>
+<body onload="myFunction()">
+
+<div style="text-align:center">
+  <h2>INDIA</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="IMAGES/banaras.jpg" height=300 width=300 onclick="myFunction(this);"><br>BANARAS
+  </div>
+  <div class="column">
+    <img src="IMAGES/amritsar.jpg" height=300 width=300 onclick="myFunction(this);"><br>AMRITSAR
+  </div>
+  <div class="column">
+    <img src="IMAGES/goa.jpg"  height=300 width=300  onclick="myFunction(this);"><br>GOA
+  </div>
+  <div class="column">
+    <img src="IMAGES/tajmahal.png" height=300 width=300 onclick="myFunction(this);"><br>TAJ MAHAL
+  </div>
+  <div class="column">
+    <img src="IMAGES/kashmir.jpg" height=300 width=300 onclick="myFunction(this);"><br>KASHMIR
+  </div>
+  <div class="column">
+    <img src="IMAGES/Mysore.jpg" height=300 width=300 onclick="myFunction(this);"><br>MYSORE
+  </div>
+  <div class="column">
+    <img src="IMAGES/KOLKATA.jpg" height=300 width=300  onclick="myFunction(this);"><br>KOLKATA
+  </div>
+  <div class="column">
+    <img src="IMAGES/mumbai.jpg" height=300 width=300 onclick="myFunction(this);"><br> MUMBAI
+  </div>
+  
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
